@@ -10,14 +10,14 @@ function App() {
   return (
     <div className="App">
       <div>
-        <ul className="statc" class="bg-blue-100 flex-row-reverse py-2">
-          <li class="py-2 text-xl underline">
+        <ul className="statc" class="bg-blue-100 flex-row-reverse px-10 flex space-x-3">
+          <li class="py-4 px-4 text-xl italic">
             <a href="/login">Login</a>
           </li>
-          <li class="py-2 text-xl underline">
+          <li class="py-4 px-4 text-xl italic">
             <a href="/profile">Profile</a>
           </li>
-          <li class="py-2 text-xl underline">
+          <li class="py-4 px-4 text-xl italic">
             <a href="/edit">Edit Profile</a>
           </li>
         </ul>

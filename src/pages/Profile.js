@@ -1,4 +1,4 @@
-import { Formik, Form, ErrorMessage, Field } from "formik";
+import { Formik} from "formik";
 import { useEffect, useState } from "react";
 import { Navigate, useNavigate } from "react-router-dom";
 
@@ -19,18 +19,18 @@ export default function Profile() {
     Navigate("/");
   };
 
-  //   useEffect(() => {
-  //     const userData = JSON.parse(localStorage.getItem("userData"));
-  //     if (userData) {
-  //       setData(userData);
-  //     }
-  //   }, []);
-  //   console.log(data)
+    useEffect(() => {
+      const userData = JSON.parse(localStorage.getItem("userData"));
+      if (userData) {
+        setData(userData);
+      }
+    }, []);
+    console.log(data)
 
   return (
-    <div className="">
+    <div className="proff">
       <Formik onSubmit={handleSubmit}>
-        <div>
+        <div className="">
           <p>firstName: {user.firstname}</p>
           <p>lastName: {user.lastname}</p>
           <p>Email: {user.email}</p>
@@ -39,7 +39,7 @@ export default function Profile() {
           <button
             type="button"
             onClick={() => Navigate('/login')}
-             class="border border-gray-400 bg-blue-300 py-1.5 px-20 rounded border-violet-600 my-5 focus:outline-none focus:border-teal-500 " 
+             class="border border-gray-400 py-1.5 px-20 rounded border-violet-600 my-5 focus:outline-none focus:border-teal-500 " 
           >
             Edit
           </button>
