@@ -4,7 +4,7 @@ import { Navigate, useNavigate } from "react-router-dom";
 
 export default function Profile() {
   const [data, setData] = useState({});
-  const Navigate = useNavigate()
+  const navigate = useNavigate()
   const user = JSON.parse(localStorage.getItem("userData"));
 
   console.log(user);
@@ -16,7 +16,7 @@ export default function Profile() {
       email: values.target.email.value,
       picture: values.target.picture.value,
     });
-    Navigate("/");
+    Navigate("/");  
   };
 
     useEffect(() => {
@@ -28,18 +28,18 @@ export default function Profile() {
     console.log(data)
 
   return (
-    <div className="proff">
+    <div className="bg-gray-100 py-10 ">
       <Formik onSubmit={handleSubmit}>
-        <div className="">
-          <p>firstName: {user.firstname}</p>
-          <p>lastName: {user.lastname}</p>
-          <p>Email: {user.email}</p>
-          <p>picture: {user.picture}</p>
+        <div className="border-green-100">
+          <p className="py-2">firstName: {user.firstname}</p>
+          <p className="py-2">lastName: {user.lastname}</p>
+          <p className="py-2">Email: {user.email}</p>
+          <p className="py-2">picture: {user.picture}</p>
 
           <button
             type="button"
-            onClick={() => Navigate('/login')}
-             class="border border-gray-400 py-1.5 px-20 rounded border-violet-600 my-5 focus:outline-none focus:border-teal-500 " 
+            onClick={() => navigate("/login")}
+            class="border border-gray-400 py-1.5 px-20 rounded border-violet-600 my-5 bg-blue-100 focus:outline-none focus:border-teal-500 "
           >
             Edit
           </button>

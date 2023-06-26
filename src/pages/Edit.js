@@ -1,5 +1,4 @@
 import { Formik, Form, ErrorMessage, Field } from "formik";
-import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import * as Yup from "yup";
 
@@ -33,7 +32,7 @@ export default function Edit() {
   };
 
   return (
-    <div class="bg-gray-200">
+    <div className="bg-gray-200">
       <Formik
         initialValues={initialValues}
         onSubmit={(values) => {
@@ -41,54 +40,53 @@ export default function Edit() {
           console.log(values);
         }}
         validationSchema={validationSchema}
-        // onSubmit={handleSubmit}
+        onsub={handleSubmit}
       >
         {() => (
-          <Form class="px-4 py-6 my-32 max-w-3xl mx-auto space-y-6 border-x-orange-500">
+          <Form className="px-4 py-6 my-32 max-w-3xl mx-auto space-y-6 border-x-orange-500">
             <div>
-              <h1 class="text-3xl italic bord"> Verify your account</h1>
+              <h1 className="text-3xl italic bord"> Verify your account</h1>
             </div>
-            <div class="flex space-x-4">
-              <div class="w-1/2">
-                <label htmlFor="firstName" class="float-left py-2">
+            <div className="flex space-x-4">
+              <div className="w-1/2">
+                <label htmlFor="firstName" className="float-left py-2">
                   First Name
                 </label>
                 <Field
                   name="firstname"
                   placeholder="firstname"
-                  className="myField"
-                  class="border border-gray-400 block  py-2 px-4 w-full rounded  focus:outline-none focus:border-teal-500"
+                  className="border border-gray-400 block  py-2 px-4 w-full rounded  focus:outline-none focus:border-teal-500"
                 />
                 <div className="error">
                   <ErrorMessage
                     name="firstname"
                     component="span"
-                    class="float-left py-2 text-red-600"
+                    className="float-left py-2 text-red-600"
                   />
                 </div>
               </div>
 
-              <div class="w-1/2">
+              <div className="w-1/2">
                 <label htmlFor="lastname" class="float-left py-2">
                   Last Name
                 </label>
                 <Field
                   name="lastname"
                   placeholder="lastname"
-                  class="border border-gray-400 block py-2 px-4 w-full rounded focus:outline-none focus:border-teal-500"
+                  className="border border-gray-400 block py-2 px-4 w-full rounded focus:outline-none focus:border-teal-500"
                 />
                 <div className="error">
                   <ErrorMessage
                     name="lastname"
                     component="span"
-                    class="float-left py-2 text-red-600"
+                    className="float-left py-2 text-red-600"
                   />
                 </div>
               </div>
             </div>
 
             <div className=" ">
-              <label htmlFor="email" class="float-left py-2">
+              <label htmlFor="email" className="float-left py-2">
                 Email
               </label>
               <Field
@@ -101,20 +99,20 @@ export default function Edit() {
                 <ErrorMessage
                   name="email"
                   component="span"
-                  class="float-left py-2 text-red-600"
+                  className="float-left py-2 text-red-600"
                 />
               </div>
             </div>
 
-            <div class="w-1/3">
-              <label htmlFor="email" class="float-left py-2">
+            <div className="w-1/3">
+              <label htmlFor="email" className="float-left py-2">
                 picture
               </label>
               <Field
                 name="picture"
                 type="file"
                 placeholder="avatar"
-                class="border border-gray-400 block py-2 px-4 w-full rounded focus:outline-none focus:border-teal-500"
+                className="border border-gray-400 block py-2 px-4 w-full rounded focus:outline-none focus:border-teal-500"
               />
               <div className="error">
                 <ErrorMessage
@@ -128,7 +126,7 @@ export default function Edit() {
             <button
               type="submit"
               onSubmit={onSubmit}
-              class="border border-gray-400 bg-blue-300 py-1.5 px-20 rounded border-violet-600 my-5 focus:outline-none focus:border-teal-500 "
+              className="border  bg-blue-300 py-1.5 px-20 rounded border-violet-600 my-5 focus:outline-none focus:border-teal-500 "
             >
               <a href="/profile">Submit</a>
             </button>

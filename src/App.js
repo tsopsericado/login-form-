@@ -1,5 +1,5 @@
 import "./App.css";
-import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import Login from "./pages/Login";
 import Profile from "./pages/Profile";
@@ -8,7 +8,7 @@ import Edit from "./pages/Edit";
 
 function App() {
   return (
-    <div className="App">
+    <div className="App"> 
       <div>
         <ul className="statc" class="bg-blue-100 flex-row-reverse px-10 flex space-x-3">
           <li class="py-4 px-4 text-xl italic">
