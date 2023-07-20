@@ -67,7 +67,7 @@ export default function Edit() {
               </div>
 
               <div className="w-1/2">
-                <label htmlFor="lastname" class="float-left py-2">
+                <label htmlFor="lastname" className="float-left py-2">
                   Last Name
                 </label>
                 <Field
@@ -85,7 +85,7 @@ export default function Edit() {
               </div>
             </div>
 
-            <div className=" ">
+            <div>
               <label htmlFor="email" className="float-left py-2">
                 Email
               </label>

@@ -1,5 +1,4 @@
 import { Formik, Form, ErrorMessage, Field } from "formik";
-import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import * as Yup from "yup";
 
@@ -16,7 +15,6 @@ export default function Login() {
        navigate("/profile");
   };
 
- 
 
   const validationSchema = Yup.object({
     firstname: Yup.string().required("firstname is required"),
@@ -31,37 +29,6 @@ export default function Login() {
  
   };
 
-  // const formik = useFormik({
-  //   initialValues: {
-  //     email: "",
-  //     username: "",
-  //     password: "",
-  //   },
-  //   onSubmit: (values) => {
-  //     console.log("onSubmit", values);
-  //   },
-  //   validationSchema: Yup.object({
-  //     email: Yup.string()
-  //       .required("Email is required")
-  //       .email("Invalid email adress"),
-  //     password: Yup.string().required("Password is required"),
-  //     username: Yup.string().required("Username is required"),
-  //   }),
-  // validate: (values) => {
-  //   const errors = {};
-  //   if (!values.email) {
-  //     errors.email = "Email is required";
-  //   }
-  //   if (!values.username) {
-  //     errors.username = "Username is required";
-  //   }
-  //   if (!values.password) {
-  //     errors.password = "Password is required";
-  //   }
-  //   return errors;
-  // },
-  // });
-
   return (
     <div class="bg-gray-200">
       <Formik
@@ -74,9 +41,9 @@ export default function Login() {
         // onSubmit={handleSubmit}
       >
         {() => (
-          <Form class="px-4 py-6 my-32 max-w-3xl mx-auto space-y-6 border-x-orange-500">
+          <Form class="px-4 py-6 max-w-3xl mx-auto space-y-6 border-x-orange-500">
             <div>
-              <h1 class="text-3xl italic bord"> Create an account</h1>
+              <h1 class="text-3xl italic bord">Create an account</h1>
               <p class="text-xl text-gray-1000">
                 Store your infos in a safety place
               </p>
@@ -161,7 +128,7 @@ export default function Login() {
             <button
               type="submit"
               onSubmit={onSubmit}
-              class="border border-gray-400 bg-blue-300 py-1.5 px-20 rounded border-violet-600 my-5 focus:outline-none focus:border-teal-500 "
+              class="border-gray-400 bg-blue-300 py-1.5 px-20 rounded my-5 focus:outline-none focus:border-teal-500 "
             >
               <a href="/profile">Submit</a>
             </button>
