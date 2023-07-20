@@ -7,7 +7,7 @@ export default function Login() {
     firstname: "",  
     lastname: "",
     email: "",
-    picture: [],
+    picture: []
   };
  const navigate = useNavigate();
   const onSubmit = (values) => {

@@ -31,15 +31,15 @@ export default function Profile() {
     <div className="bg-gray-100 py-10 ">
       <Formik onSubmit={handleSubmit}>
         <div className="border-green-100">
-          <p className="py-2">firstName: {user.firstname}</p>
-          <p className="py-2">lastName: {user.lastname}</p>
+          <h1 className="py-2">Hi..! {user.firstname}</h1>
+          <p className="py-2">LastName: {user.lastname}</p>
           <p className="py-2">Email: {user.email}</p>
-          <p className="py-2">picture: {user.picture}</p>
+          <p className="py-2">Avatar: {user.picture}</p>
 
           <button
             type="button"
             onClick={() => navigate("/login")}
-            class="border border-gray-400 py-1.5 px-20 rounded border-violet-600 my-5 bg-blue-100 focus:outline-none focus:border-teal-500 "
+            className="border py-1.5 px-20 rounded border-violet-600 my-5 bg-blue-100 focus:outline-none focus:border-teal-500 "
           >
             Edit
           </button>
