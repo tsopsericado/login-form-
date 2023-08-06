@@ -9,7 +9,9 @@ export default function Edit() {
     firstname: `${user.firstname}`,
     lastname: `${user.lastname}`,
     email: `${user.email}`,
-    picture: `${user.picture}`
+    picture: `${user.picture}`,
+    password: `${user.password}`,
+    confirm_password: ``
   };
 
   const onSubmit = (values) => {
@@ -24,6 +26,9 @@ export default function Edit() {
     email: Yup.string()
       .required("email is required")
       .email("Invalid email adress"),
+    
+
+
   });
 
   const handleSubmit = (values) => {
@@ -32,7 +37,11 @@ export default function Edit() {
   };
 
   return (
-    <div className="bg-gray-200">
+    <div
+      className=" h-screen bg-gradient-to-b
+        from-blue-200 to-purple-400
+    px-30  my-50"
+    >
       <Formik
         initialValues={initialValues}
         onSubmit={(values) => {
@@ -105,7 +114,7 @@ export default function Edit() {
             </div>
 
             <div className="w-1/3">
-              <label htmlFor="email" className="float-left py-2">
+              <label htmlFor="picture" className="float-left py-2">
                 picture
               </label>
               <Field
